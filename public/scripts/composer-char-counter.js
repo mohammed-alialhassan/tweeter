@@ -1,18 +1,13 @@
 $(document).ready(function() {
-  const EventHandler = function (element) {
-    this.input = ($('#tweet-text').val().length)
-  }
-//------------------------------------------------
-  $('#tweet-text').keyup (() => {
-    this.input = ($('#tweet-text').val().length)
-    const $counterUpdate = $('.counter');
-    $counterUpdate.text(140 - this.input);
-    if (this.input > 140) {
-      $counterUpdate.css('color', 'red');
+  $('section.new-tweet form textarea').keyup(function() {
+    const counterUpdate = $(this).siblings('div.box-for-tweets').children('output');
+    const count = 140 - $(this).val().length
+    counterUpdate.text(count);
+    
+    if (count < 0) {
+      counterUpdate.addClass("neg");
     } else {
-      $counterUpdate.css('color', '#4056A1');
+      counterUpdate.removeClass("neg");
     }
-    console.log($counterUpdate.text());
   })
 });
-
