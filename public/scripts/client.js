@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+
 const data = [
   {
     "user": {
@@ -29,20 +30,13 @@ const data = [
   }
 ]
 
-const renderTweets = function(tweets) {
-  $('#tweets-container').empty();
-  // loops through tweets
-  for (const tweet of tweets) {
-    const tweetElement = createTweetElement(tweet);
-    $('#tweet-container').append(tweetElement);
-  }
-};
+
     // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
 
 const createTweetElement = function (data) {
  let $tweet = ` 
- <article class= "article">
+ <article>
  <div class= "user-elements">
    <div class="user-pic">
      <img src="${data.user.avatars}"> <p>${data.user.name}</p>
@@ -65,5 +59,12 @@ const createTweetElement = function (data) {
 return $tweet;
 };
 
+const renderTweets = function(tweets) {
+  // loops through tweets
+  for (const tweet of tweets) {
+    const tweetElement = createTweetElement(tweet);
+    $('#tweet-container').append(tweetElement);
+  }
+};
+
 renderTweets(data);
-//document.getElementById("tweet-container").innerHTML = createTweetElement(tweetData)
