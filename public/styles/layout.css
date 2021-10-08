@@ -17,20 +17,102 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 120px;
   color: #ffd500;;
   font-size: 24px;
   font-family: "Source Sans Pro", "sans-serif";
+  background-color: #ffecad; 
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- main {
+ main.container {
    display: flex;
    flex-direction: column;
    align-items: center;
-   text-align: center;
    width: 90%;
    color: #ffd500;
  }
+
+ main > section > h2 {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+ }
+
+ #tweet-container {
+   box-sizing: border-box;
+   background-color: #fff0a6;
+   width: 90%;
+ }
+
+ div.user-elements {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-items: flex-end;
+  width: 100%;
+  height: 10ch;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 20px;
+  color: dimgray;
+  background-image: none;
+ }
+
+ div.user-pic {
+   display: flex;
+   flex-direction: row;
+   justify-content: left;
+   margin-top: 2ch;
+ }
+
+ .text-line {
+  border-top: 4px solid #242135;
+  width: 90%;
+  margin-left: 3ch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: dimgray;
+  font-size: 80%;
+ }
+
+ article {
+   border: 4px #21211b solid;
+   margin-bottom: 11px;
+   padding-bottom: 4ch;
+   padding-left: 2ch;
+ }
+
+ content {
+   padding-left: 30px;
+   padding-bottom: 3em;
+   font-weight: 600;
+   color: dimgray;
+ }
+
+ article:hover {
+  box-shadow: 10px 10px 15px midnightblue;
+  background-color:floralwhite;
+}
+
+div.footer-icons {
+  color:#4056A1;
+  font-size: 2em;
+}
+
+.fa-flag:hover {
+  color: #ffd500;
+}
+
+.fa-retweet:hover {
+  color:#ffd500
+}
+
+.fa-heart:hover {
+  color: #ffd500;
+}
