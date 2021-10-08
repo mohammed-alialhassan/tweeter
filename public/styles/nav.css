@@ -1,3 +1,4 @@
+/* navigation element */
 nav {
   display: flex;
   align-items: center;
@@ -8,31 +9,38 @@ nav {
   padding-left: 1.5em;
   padding-right: 1.5em;
   background-color: #4056A1;
-  color: #FFFFFF; 
+  color: white; 
   z-index: 2;
+  position: fixed;
+  top: 0;
 }
 
-.nav-logo {
+/* navigation => span element */
+nav span.logo {
   display: flex;
   padding-top: 20px;
   font-size: 1.75em;
   font-family: "Bungee", cursive;
 }
 
-.right-side {
+/*navigation => division =>class defined as right-side */
+nav div.right-side {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.write-new-tweet {
-  display: flex;
-}
-
-.angle-icon {
+/* Navigation => icon =>anlge double down icon */
+nav div.right-side i {
   display: flex;
   margin-top: -35px;
   color: red;
 }
+
+.fa-angle-double-down:hover {
+  lighting-color: yellow;
+  color:#ffd500
+}
+
 
 
