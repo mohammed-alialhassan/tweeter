@@ -1,0 +1,75 @@
+/*referencing textarea */
+textarea {
+  width: 100%;
+  background-color: inherit;
+  border: none;
+  border-bottom: 4px solid #242135;
+  font-family: "Source sans Pro", "sans serif";
+  color: #4056A1;
+}
+
+/*section element referencing class => new-tweet */
+section.new-tweet {
+width: 100%;
+color: blue;
+background-color: #ffecad;
+margin-bottom: 20px;
+border: 4px #21211b solid;
+padding-left: 6px;
+padding-right: 6px;
+padding-bottom: 4px;
+padding-top: 63px;
+}
+
+section.new-tweet:hover {
+  box-shadow: 10px 10px 15px midnightblue;
+  background-color:floralwhite;
+}
+
+/*division element referencing class => box-for-tweets */
+div.box-for-tweets {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: slateblue;
+  font-family: "Bungee", cursive;
+  width: 100%;
+}
+
+/* button element referencing tweet button */
+#tweetButton {
+  font-family: "Bungee",cursive;
+  background-color: #4056A1;
+  color: aliceblue;
+}
+
+/* output element with class */
+output {
+  font-family: "Bungee", cursive;
+  color: #4056A1;
+  text-align: right;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#emptyText {
+  color: red;
+}
+
+#tweetTooLong {
+  color: red;
+}
+
+.neg { color: red; } 
+
+@media only screen and (min-width: 400px) and (max-width: 768px) {
+  main {
+    margin-left: 1em;
+    margin-right: 1em;
+    width: 100%;
+  }
+
+  main.container{
+    width: 90%;
+  }
+}

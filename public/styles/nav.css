@@ -5,13 +5,12 @@ nav {
   justify-content: space-between;
   height: 120px;
   width: 100%;
-  font-size: 1.5em;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-  background-color: #4056A1;
+  font-size: 3vh;
+  padding-left: 1vh;
+  padding-right: 1vh;
   color: white; 
   z-index: 2;
-  position: fixed;
+  position:relative;
   top: 0;
 }
 
@@ -33,7 +32,7 @@ nav div.right-side {
 /* Navigation => icon =>anlge double down icon */
 nav div.right-side i {
   display: flex;
-  margin-top: -35px;
+  margin-top: -20px;
   color: red;
 }
 
@@ -42,5 +41,24 @@ nav div.right-side i {
   color:#ffd500
 }
 
+@media only screen and (min-width: 320px) and (max-width:400px) {
+  nav {
+    font-size: 16px;
+  }
 
+  div.right-side {
+    padding-top: 5px;
+  }
 
+  .fa-angle-double-down {
+    margin-top: -20px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  nav {
+    background-color: #4056A1;
+    position: fixed;
+    font-size: 24px;
+  }
+}
